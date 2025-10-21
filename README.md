@@ -1,6 +1,6 @@
 # Nodejs-Notes
 
-# ====================== Ubuntu on Windows ================================
+# ========= Ubuntu on Windows =====
 
 # --------- Install nvm command -------------------------
 Bước 1 
