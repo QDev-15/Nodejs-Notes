@@ -6,14 +6,14 @@
 # Step 1 
 * update apt
   
-    $sudo apt update && sudo apt upgrade -y
+    $ sudo apt update && sudo apt upgrade -y
   
 * install package support if not
-  
-    $sudo apt install -y build-essential curl
+    ```bash
+    $ sudo apt install -y build-essential curl
   
 * install nvm
-
+  ```bash
     $curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
 # Step 2 – Active nvm in the current session
@@ -21,7 +21,7 @@
   $source ~/.bashrc
   $source ~/.zshrc
 
-*Check
+* Check
 
   $nvm --version
 
