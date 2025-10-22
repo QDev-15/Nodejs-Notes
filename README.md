@@ -17,10 +17,10 @@
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
 # Step 2 – Active nvm in the current session
-
+* check bashrc
 ```bash
 source ~/.bashrc
-
+* check zshrc
 ```bash
 source ~/.zshrc
 
