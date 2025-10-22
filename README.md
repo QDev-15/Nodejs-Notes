@@ -78,3 +78,77 @@ npm run start
 
 ## ----- End get Ip -----------
 
+# ===== Cấu hình Mongodb ubuntu connect to windows ======
+Lỗi MongooseServerSelectionError: connection timed out có nghĩa là ứng dụng Node.js của bạn (chạy trong WSL) đã tìm thấy địa chỉ IP của máy Windows (172.24.176.1), nhưng khi nó cố gắng kết nối đến cổng 27017 tại đó, nó không nhận được phản hồi cho đến khi hết thời gian.
+
+Đây gần như chắc chắn là một trong hai vấn đề:
+
+Tường lửa (Firewall) của Windows đang chặn kết nối.
+
+Cấu hình MongoDB trên Windows không cho phép kết nối từ bên ngoài.
+
+#Hãy kiểm tra từng bước sau:
+
+#1. 🧱 Tường lửa Windows (Lý do phổ biến nhất)
+Tường lửa của Windows đang coi kết nối từ WSL (Ubuntu) là một kết nối "từ bên ngoài" và đang chặn nó.
+
+Cách sửa: Bạn phải tạo một "Inbound Rule" (Luật cho kết nối đến) để cho phép cổng 27017.
+
+Trên Windows, mở "Windows Defender Firewall with Advanced Security" (bạn có thể tìm nó trong Start Menu).
+
+Ở cột bên trái, nhấn vào "Inbound Rules".
+
+Ở cột bên phải, nhấn vào "New Rule...".
+
+Một cửa sổ mới sẽ hiện ra:
+
+Chọn Port -> Next.
+
+Chọn TCP và điền vào "Specific local ports:" là 27017 -> Next.
+
+Chọn "Allow the connection" -> Next.
+
+Để nguyên 3 ô (Domain, Private, Public) được tick -> Next.
+
+Đặt tên cho nó (ví dụ: MongoDB WSL) và nhấn Finish.
+
+Thử chạy lại ứng dụng Node.js của bạn.
+
+#2. ⚙️ Cấu hình bindIp của MongoDB
+Nếu Tường lửa đã mở mà vẫn lỗi, thì do MongoDB trên Windows được cấu hình chỉ nghe kết nối từ localhost của Windows (127.0.0.1).
+
+Cách sửa: Bạn cần sửa file cấu hình của MongoDB để nó chấp nhận kết nối từ mọi IP.
+
+Tìm file mongod.cfg. Vị trí phổ biến nhất là: C:\Program Files\MongoDB\Server\<phiên-bản-của-bạn>\bin\mongod.cfg
+
+Mở file này bằng một trình soạn thảo (ví dụ: Notepad) với quyền Administrator (Quản trị viên).
+
+Tìm đến mục net:, nó sẽ trông như thế này:
+
+YAML
+
+net:
+  port: 27017
+  bindIp: 127.0.0.1 
+Sửa bindIp từ 127.0.0.1 thành 0.0.0.0:
+
+YAML
+
+net:
+  port: 27017
+  bindIp: 0.0.0.0  # Sửa dòng này
+(Lưu ý: 0.0.0.0 nghĩa là "chấp nhận kết nối từ bất kỳ địa chỉ IP nào").
+
+Lưu file lại.
+
+Rất quan trọng: Khởi động lại dịch vụ MongoDB.
+
+Mở Services trên Windows (tìm trong Start Menu).
+
+Tìm dịch vụ tên là "MongoDB Server".
+
+Nhấn chuột phải vào nó và chọn Restart.
+
+Sau khi MongoDB khởi động lại, thử chạy lại ứng dụng Node.js của bạn.
+
+# ===== End config connect DB ============
