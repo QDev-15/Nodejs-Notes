@@ -4,10 +4,10 @@
 
 ## --------- Install nvm command -------------------------
 # Step 1 
-* update apt
-  {
+* update apt<\br>
+  
     $sudo apt update && sudo apt upgrade -y
-  }
+  
 * install package support if not
     $sudo apt install -y build-essential curl
 *install nvm
