@@ -6,7 +6,7 @@
 # Step 1 
 * update apt
   ```bash
-    sudo apt update && sudo apt upgrade -y
+  sudo apt update && sudo apt upgrade -y
   
 * install package support if not
     ```bash
@@ -14,14 +14,14 @@
   
 * install nvm
   ```bash
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
 # Step 2 – Active nvm in the current session
 
 ```bash
-  source ~/.bashrc
+source ~/.bashrc
 ```bash
-  source ~/.zshrc
+source ~/.zshrc
 
 * Check
 
@@ -55,22 +55,22 @@
 * Install version
 
 ```bash
-  nvm install 20.0.0    
+nvm install 20.0.0    
 
 * Switch version
   
-    ```bash
-  nvm use 20.0.0
+```bash
+nvm use 20.0.0
   
 * Set default version
   
-    ```bash
-  nvm alias default 18
+```bash
+nvm alias default 18
     
 * Delete version
   
-    ```bash
-  nvm uninstall 18
+```bash
+nvm uninstall 18
 
 ## ----- End install nvm ---------
 ## ----- Get Ip ---------
