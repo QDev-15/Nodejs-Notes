@@ -20,6 +20,7 @@
 
 ```bash
 source ~/.bashrc
+
 ```bash
 source ~/.zshrc
 
@@ -34,6 +35,7 @@ source ~/.zshrc
 
     ```bash
     nvm install 18
+
     ```bash
     nvm use 18
 
@@ -48,29 +50,28 @@ source ~/.zshrc
     nvm ls-remote
 
 * List installed version
-
     ```bash
     nvm ls
   
 * Install version
 
-```bash
-nvm install 20.0.0    
+  ```bash
+  nvm install 20.0.0    
 
 * Switch version
   
-```bash
-nvm use 20.0.0
+  ```bash
+  nvm use 20.0.0
   
 * Set default version
   
-```bash
-nvm alias default 18
+  ```bash
+  nvm alias default 18
     
 * Delete version
   
-```bash
-nvm uninstall 18
+  ```bash
+  nvm uninstall 18
 
 ## ----- End install nvm ---------
 ## ----- Get Ip ---------
