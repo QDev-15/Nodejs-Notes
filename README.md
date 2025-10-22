@@ -2,7 +2,7 @@
 
 # ========= Ubuntu on Windows =====
 
-# --------- Install nvm command -------------------------
+## --------- Install nvm command -------------------------
 Bước 1 
 # update apt
 sudo apt update && sudo apt upgrade -y
@@ -71,5 +71,10 @@ nvm use 18   # nếu dự án phù hợp Node 18
 node -v      # kiểm tra
 npm install  # sử dụng Node 18 và npm tương ứng
 npm run start
-
+## ----- End install nvm ---------
+## ----- Get Ip ---------
+{
+  ip route show default | awk '{print $3}'
+}
+## ----- End get Ip -----------
 
