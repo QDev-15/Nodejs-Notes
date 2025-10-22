@@ -9,24 +9,31 @@
     $sudo apt update && sudo apt upgrade -y
   
 * install package support if not
+  
     $sudo apt install -y build-essential curl
+  
 *install nvm
+
     $curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
 # Step 2 – Active nvm in the current session
+
   $source ~/.bashrc
   $source ~/.zshrc
 
 *Check
+
   $nvm --version
 
 # Step 3 – Install Nodejs version by nvm
 
 * Ex:
+
     $nvm install 18
     $nvm use 18
 
 * Set default version
+
     $nvm alias default 18
 
 # Bước 4 – Manager version Nodejs
