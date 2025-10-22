@@ -73,8 +73,8 @@ npm install  # sử dụng Node 18 và npm tương ứng
 npm run start
 ## ----- End install nvm ---------
 ## ----- Get Ip ---------
-{
+
   ip route show default | awk '{print $3}'
-}
+
 ## ----- End get Ip -----------
 
