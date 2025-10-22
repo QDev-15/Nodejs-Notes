@@ -5,65 +5,78 @@
 ## --------- Install nvm command -------------------------
 # Step 1 
 * update apt
-  
-    $ sudo apt update && sudo apt upgrade -y
+  ```bash
+    sudo apt update && sudo apt upgrade -y
   
 * install package support if not
     ```bash
-    $ sudo apt install -y build-essential curl
+    sudo apt install -y build-essential curl
   
 * install nvm
   ```bash
-    $curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
 # Step 2 – Active nvm in the current session
 
-  $source ~/.bashrc
-  $source ~/.zshrc
+```bash
+  source ~/.bashrc
+```bash
+  source ~/.zshrc
 
 * Check
 
-  $nvm --version
+  ```bash
+  nvm --version
 
 # Step 3 – Install Nodejs version by nvm
 
 * Ex:
 
-    $nvm install 18
-    $nvm use 18
+    ```bash
+    nvm install 18
+    ```bash
+    nvm use 18
 
 * Set default version
 
-    $nvm alias default 18
+    ```bash
+    nvm alias default 18
 
 # Bước 4 – Manager version Nodejs
 * List all version
-    $nvm ls-remote
+    ```bash
+    nvm ls-remote
 
 * List installed version
 
-    $nvm ls
+    ```bash
+    nvm ls
   
 * Install version
 
-    $nvm install 20.0.0    
+```bash
+  nvm install 20.0.0    
 
 * Switch version
   
-    $nvm use 20.0.0
+    ```bash
+  nvm use 20.0.0
   
 * Set default version
   
-    $nvm alias default 18
+    ```bash
+  nvm alias default 18
     
 * Delete version
   
-    $nvm uninstall 18
+    ```bash
+  nvm uninstall 18
 
 ## ----- End install nvm ---------
 ## ----- Get Ip ---------
 
-  $ip route show default | awk '{print $3}'
+  ```bash
+  ip route show default | awk '{print $3}'
 
 ## ----- End get Ip -----------
 
