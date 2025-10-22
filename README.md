@@ -4,7 +4,7 @@
 
 ## --------- Install nvm command -------------------------
 # Step 1 
-* update apt<\br>
+* update apt
   
     $sudo apt update && sudo apt upgrade -y
   
