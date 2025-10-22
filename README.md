@@ -32,11 +32,12 @@
 
 # Step 3 – Install Nodejs version by nvm
 
-* Ex:
+* Install
 
     ```bash
     nvm install 18
 
+* Use version
     ```bash
     nvm use 18
 
@@ -76,9 +77,10 @@
 
 ## ----- End install nvm ---------
 ## ----- Get Ip ---------
-
+* Get ip from ubuntu of window
   ```bash
   ip route show default | awk '{print $3}'
+
 
 ## ----- End get Ip -----------
 
