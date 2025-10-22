@@ -18,14 +18,15 @@
 
 # Step 2 – Active nvm in the current session
 * check bashrc
-```bash
-source ~/.bashrc
+  ```bash
+  source ~/.bashrc
+
+
 * check zshrc
-```bash
-source ~/.zshrc
+  ```bash
+  source ~/.zshrc
 
-* Check
-
+* Check version
   ```bash
   nvm --version
 
