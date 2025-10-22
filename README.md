@@ -11,8 +11,7 @@
 *install nvm
     $curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
-# Step 2 – Kích hoạt nvm trong session hiện tại
-
+# Step 2 – Active nvm in the current session
   $source ~/.bashrc
   $source ~/.zshrc
 
